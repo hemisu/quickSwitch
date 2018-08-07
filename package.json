@@ -1,7 +1,7 @@
 {
   "name": "quickswitch",
   "productName": "quickSwitch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool for switching hosts and nginx`s configuration on Mac OS",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
