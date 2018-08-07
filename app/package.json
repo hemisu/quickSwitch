@@ -1,9 +1,9 @@
 {
-  "name": "quickSwitch",
+  "name": "quickswitch",
   "productName": "quickSwitch",
   "displayName": "quickSwitch",
-  "version": "1.0.0",
-  "description": "Electron application based on React, React Router, Webpack, React Hot Loader for rapid switch development",
+  "version": "1.0.1",
+  "description": "A tool for switching hosts and nginx`s configuration on Mac OS",
   "main": "./main.prod.js",
   "author": {
     "name": "hemisu",
