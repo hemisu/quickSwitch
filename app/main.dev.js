@@ -531,7 +531,11 @@ ipcMain.on('importNginx', (ev, originFile, targetFile) => {
     }).catch((error) => {
       log.info('originFile不存在');
       const targetFileName = path.parse(targetFile).name;
-      fs.copyFile(targetFile, getNginxPath(targetFileName));
+      
+      var rs = fs.createReadStream(targetFile);
+      var ws = fs.createWriteStream(getNginxPath(targetFileName));
+      rs.pipe(ws);
+      // fs.copyFile(targetFile, getNginxPath(targetFileName));
     });
   } catch (error) {
     log.error('导入nginx文件失败', error.message);
