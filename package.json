@@ -17,7 +17,7 @@
     "lint-styles": "stylelint app/*.css app/components/*.css --syntax scss",
     "lint-styles-fix": "stylefmt -r app/*.css app/components/*.css",
     "package": "npm run build && build --publish never",
-    "package-publish": "npm run build && build --publish always",
+    "package-publish": "npm run build && build -m --publish always",
     "package-all": "npm run build && build -mwl",
     "package-linux": "npm run build && build --linux",
     "package-win": "npm run build && build --win --x64",
