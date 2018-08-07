@@ -14,6 +14,10 @@ cache:
     - node_modules
     - app/node_modules
 
+env:
+  global:
+    - secure: "KGA2F3vxp0pb1HLsNvsgWwUtyZTMa0+zg0Cff43gOZ+Hp3aLvlapBWtionswFKL3P72wl65vFA2e63BeDUFsoorm/qZ41ytIU7Dxs5+AT4Zpc8l/ERrpzVUIlW5oGv4MF5IybxuZBaTf0pzHQ8AJn75Xdsah7OlgEtKDHQnSdcl9jENFq3gtmcydKmNY5OTSVV7B3DE+DfDfPozGAle/Y6caWCKbBigQTl5PwfzmX+/LWT2mFymBF/cY+Bu2TMNbZCTUBAkMcBYZd0rXOX5msVDfZGObiTgvaJ/sA+L1nngY7Bfv5snlrImZ98KyDshg9hOFo2PvRfq5Fe75Tprl6+cTjNAmnNflHit65gobnUoX+H0wq9yX7CTnsicYC+DEdfpb053jEwKiSztn9JypzLRS+MRfoHAy5QjgbA420tPLIZKpsT+F9C8OXonhT2PYmRPsJUyrxg4XgsLNOUSz3zxP831ExDdD1IuN19LlQv7t50LWLsttbhOxbTCQJdUimfjB7MnRsuQzFA+9PGmfLCouazV1c301J5KcQqZ2RIkliD2DitJnQ5hR1NvD/QUXqBp70hHP9ERPW2xvWVd53v6XiFBEssuhacfIshX8Kj4Uiq578qrTy3vx5sllnmQpVCWlqwnVTWWENJc1rL/YTcZzuamCpikhGqtd22fPNzg="
+
 addons:
   apt:
     sources:
@@ -36,9 +40,12 @@ before_script:
   - sh -e /etc/init.d/xvfb start &
   - sleep 3
 
+os:
+  -osx
+
 script:
   - node --version
   # - yarn lint
-  - yarn package
+  - yarn package-publish
   # - yarn test
   # - yarn test-e2e
