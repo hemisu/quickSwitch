@@ -57,7 +57,10 @@
     "extraResources": ["app/assets/", "app/main/"],
     "asar": false,
     "mac": {
-      "target": "dmg",
+      "target": [
+        "dmg",
+        "zip"
+      ],
       "category": "public.app-category.developer-tools"
     },
     "dmg": {
@@ -73,18 +76,6 @@
           "path": "/Applications"
         }
       ]
-    },
-    "win": {
-      "target": [
-        "nsis"
-      ]
-    },
-    "linux": {
-      "target": [
-        "deb",
-        "AppImage"
-      ],
-      "category": "Development"
     },
     "directories": {
       "buildResources": "resources",
